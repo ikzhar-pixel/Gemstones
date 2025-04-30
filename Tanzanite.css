@@ -23,135 +23,122 @@ html{
     font-size: 62.5%;
     overflow-x: hidden;
 }
-.header{
-    position: absolute;
+.navbar {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 2rem 10%;
-    color: var(--light-color);
+    height: 70px;
+    padding: 0;
+    background: rgba(29, 26, 26, 0.574);
+    backdrop-filter: blur(35px);
+    border-bottom: 2px solid #95919130;
+    box-shadow: 0 0 10px #0000003d;
+    transition: 0.5s;
+    z-index: 5;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.navbar.active {
+    width: 260px;
+    height: 100vh;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgba(29, 26, 26, 0.574);
+    backdrop-filter: blur(35px);
+}
+
+.navbar .logo-menu {
+    display: flex;
     align-items: center;
-    z-index: 100;
- }
- .header .Logo{
-    font-size: 2.5rem;
-    font-weight: 500;
-    color: var(--light-color);
-    cursor: default;
-    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.422);
-    margin-left: 40px;
- }
- .header::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, .1);
-    backdrop-filter: blur(1rem);
-    z-index: -1;
- }
- .header::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent,
-    rgba(255, 255, 255, 0.4), transparent);
-    transition: .5s;
- }
- .header:hover::after{
-    left: 100%;
- }
- .navbar .links a{
+    height: 70px;
+    padding: 0;
     position: relative;
+}
+
+.navbar .logo-menu .logo {
+    font-size: 25px;
+    color: #fff;
+    pointer-events: none;
+    opacity: 0;
+    transition: .3s;
+    margin-left: 50px;
+}
+
+.navbar.active .logo-menu .logo {
+    opacity: 1;
+    transition-delay: .2s;
+}
+
+.navbar .logo-menu .toggle-btn {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.navbar .list {
+    display: none;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+}
+
+.navbar.active .list {
+    display: flex;
+}
+
+.list .list-item {
+    width: 100%;
+    line-height: 50px;
+    padding: 10px 20px;
+}
+
+.list .list-item a {
+    display: flex;
+    align-items: center;
     font-size: 18px;
     color: #fff;
-    font-weight: 500;
     text-decoration: none;
-    margin-left: 35px;
-    transition: 1.6s;
-}
-.navbar .links a:hover{
-    color: var(--main-color);
-}
-.navbar .links a:hover::before{
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: 0.5s;
     width: 100%;
-    background: var(--main-color);
 }
-.navbar .links a:hover,
-.navbar .links a.active{
-    color: var(--main-color);
+
+.list .list-item a:hover,
+.list .list-item.active a {
+    background: #ffffff30;
 }
-.icons{
-    position: absolute;
-    right: 5%;
-    font-size: 2.8rem;
-    color:#fff;
-    cursor: pointer;
-    display: none;
+
+.list .list-item a i {
+    margin-right: 15px;
 }
-#check{
-    display: none;
+.navbar .link-name {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
 }
-@media (max-width: 992px){
-    .header{
-        padding: 1.3rem 5%;
-    }
-}
-@media (max-width: 768px){
-    .icons{
-        display: inline-flex;
-    }
 
-    #check:checked~.icons #menu-icon{
-        display: none;
-    }
-
-    .icons #colse-icon{
-        display: none;
-    }
-
-    #check:checked~.icons #colse-icon {
-        display: block;
-    }
-
-    .navbar{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 0;
-        background: rgba(0, 0, 0, .1);
-        backdrop-filter: blur(1rem);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-        transition: .3s ease;
-        overflow: hidden;
-    }
-
-    #check:checked~.navbar {
-        height: 21rem;
-    }
-
-    .navbar a{
-        display: block;
-        font-size: 1.1rem;
-        margin: 1.8rem 0;
-        text-align: center;
-        transform: translateY(-50px);
-        transition: .3s ease;
-        opacity: 0;
-    }
-    #check:checked~.navbar a{
-        transform: translateY(0);
-        transition-delay: calc(.15s * var(--i));
-        opacity: 1;
-    }
+.navbar.active .link-name {
+    opacity: 1;
+    pointer-events: auto;
+    transition-delay: calc(0.1s * var(--i));
 }
 section{
     position: relative;

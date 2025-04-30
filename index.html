@@ -28,22 +28,39 @@
     </head>
     <body>
         <!-- == Header Design == -->
-         <header class="header">
-            <a href="index.html" class="Logo"><b>Main page</b></a>
-            <input type="checkbox" id="check">
-            <label for="check" class="icons">
-                <i class='bx bx-menu' id="menu-icon"></i>
-                <i class='bx bx-x' id="colse-icon"></i>
-            </label>
-            <nav class="navbar">
-                <ul class="links">
-                <a href="#Types of gemstones" style="--i:0;"><b>Types of gemstones</b></a>
-                <a href="#Value" style="--i:1;"><b>Value</b></a>
-                <a href="#Some Gemstones" style="--i:2;"><b>Some Gemstones</b></a>
-                <a href="#contact" style="--i:3;"><b>Contact</b></a>
-                </ul>
-            </nav>
+        <header class="navbar">
+            <div class="logo-menu">
+                <i class='bx bx-menu toggle-btn'></i> <!-- Default menu icon -->
+                <h2 class="logo">Main Page</h2>
+            </div>
+            <ul class="list">
+                <li class="list-item">
+                    <a href="#Types of gemstones">
+                        <i class='bx bx-list-ul'></i>
+                        <span class="link-name" style="--i:0;">Types of Gemstones</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#Value">
+                        <i class='bx bx-coin'></i>
+                        <span class="link-name" style="--i:1;">Value</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#Some Gemstones">
+                        <i class='bx bx-diamond'></i>
+                        <span class="link-name" style="--i:2;">Some Gemstones</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#contact">
+                        <i class='bx bxs-phone-call'></i>
+                        <span class="link-name" style="--i:3;">Contact</span>
+                    </a>
+                </li>
+            </ul>
         </header>
+         <script src="index.js"></script>
          <!-- == Home Section Design == -->
           <section class="home" id="home">
             <div class="home-content">

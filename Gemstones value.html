@@ -28,21 +28,33 @@
     </head>
     <body>
         <!-- == header Design == -->
-         <header class="header">
-                <a href="Mining.html" class="Logo"><b>Gemstones Value</b></a>
-                <input type="checkbox" id="check">
-                <label for="check" class="icons">
-                    <i class='bx bx-menu' id="menu-icon"></i>
-                    <i class='bx bx-x' id="colse-icon"></i>
-                </label>
-                <nav class="navbar">
-                    <ul class="links">
-                    <a href="index.html" style="--i:0;"><b>Main page</b></a>
-                    <a href="#Value" style="--i:1;"><b>Value</b></a>
-                    <a href="#contact" style="--i:4;"><b>Contact</b></a>
-                    </ul>
-                </nav>
-             </header>
+        <header class="navbar">
+            <div class="logo-menu">
+                <i class='bx bx-menu toggle-btn'></i> <!-- Default menu icon -->
+                <h2 class="logo">Gemstones Value</h2>
+            </div>
+            <ul class="list">
+                <li class="list-item">
+                    <a href="index.html">
+                        <i class='bx bxs-home'></i>
+                        <span class="link-name" style="--i:0;">Main Page</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#Value">
+                        <i class='bx bx-coin'></i>
+                        <span class="link-name" style="--i:1;">Value</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#contact">
+                        <i class='bx bxs-phone-call'></i>
+                        <span class="link-name" style="--i:2;">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <script src="index.js"></script>
          <!-- == Home Section Design == -->
           <section class="home" id="home">
             <div class="home-content">

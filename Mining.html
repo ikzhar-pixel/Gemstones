@@ -28,23 +28,45 @@
     </head>
     <body>
         <!-- == header Design == -->
-        <header class="header">
-            <a href="Mining.html" class="Logo"><b>Mining Gemstones</b></a>
-            <input type="checkbox" id="check">
-            <label for="check" class="icons">
-                <i class='bx bx-menu' id="menu-icon"></i>
-                <i class='bx bx-x' id="colse-icon"></i>
-            </label>
-            <nav class="navbar">
-                <ul class="links">
-                <a href="index.html" style="--i:0;"><b>Main page</b></a>
-                <a href="#Mining" style="--i:1;"><b>Mining places</b></a>
-                <a href="#Info" style="--i:2;"><b>Info</b></a>
-                <a href="#Other" style="--i:3;"><b>Other</b></a>
-                <a href="#contact" style="--i:4;"><b>Contact</b></a>
-                </ul>
-            </nav>
-         </header>
+        <header class="navbar">
+            <div class="logo-menu">
+                <i class='bx bx-menu toggle-btn'></i> <!-- Default menu icon -->
+                <h2 class="logo">Mining Gemstones</h2>
+            </div>
+            <ul class="list">
+                <li class="list-item">
+                    <a href="index.html">
+                        <i class='bx bxs-home'></i>
+                        <span class="link-name" style="--i:0;">Main Page</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#Mining places">
+                        <i class='bx bx-diamond'></i>
+                        <span class="link-name" style="--i:1;">Mining places</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#Info">
+                        <i class='bx bx-question-mark' ></i>
+                        <span class="link-name" style="--i:2;">Info</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#Other">
+                        <i class='bx bx-menu-alt-left'></i>
+                        <span class="link-name" style="--i:3;">Other</span>
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#contact">
+                        <i class='bx bxs-phone-call'></i>
+                        <span class="link-name" style="--i:4;">Contact</span>
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <script src="index.js"></script>
          <!-- == Home Section Design == -->
           <section class="home" id="home">
             <div class="home-content">
@@ -53,7 +75,7 @@
             </div>
           </section>
           <!-- == Portfolio Section Design == -->
-          <section class="portfolio" id ="Mining">
+          <section class="portfolio" id ="Mining places">
             <h2 class="heading"><span>Top 6 places </span>for Gemstones Mining</h2>
             <p><b>Top 6 mining places</b></p>
             <div class="portfolio-container">
@@ -90,19 +112,19 @@
                 </div>
                 <div class="about-text">
                     <p>
-                        <b>Exploration 🔍</b>
+                        <b>Exploration</b>
                         <h3>Searching for gemstone deposits. Geologists study the area, analyze soil samples, use satellite images and drilling to confirm the presence of valuable minerals.</h3>
                     </p>
                     <p>
-                        <b>Mining ⛏️</b>
+                        <b>Mining</b>
                         <h3>Once a deposit is found, mining begins. It can be underground (shaft mining), open-pit, or alluvial (from riverbeds or loose sediments).</h3>
                     </p>
                     <p>
-                        <b>Sorting and Cleaning 🧼</b>
+                        <b>Sorting and Cleaning</b>
                         <h3>The raw materials are sorted: gemstones are separated from rock, washed, sometimes chemically treated. Then they're classified by size, quality, and color.</h3>
                     </p>
                     <p>
-                        <b>Cutting and Polishing 💎</b>
+                        <b>Cutting and Polishing</b>
                         <h3>Gemstones are cut, shaped, and polished to bring out their brilliance. This precise work turns raw stones into gems ready for use in jewelry.</h3>
                     </p>
                 </div>
