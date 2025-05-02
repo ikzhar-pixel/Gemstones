@@ -128,3 +128,17 @@
                 </div>
             </div>
         </section>
+        <div class="preloader">
+            <div class="loader-text">Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></div>
+          </div>
+          <script>
+            window.addEventListener("load", () => {
+                const preloader = document.querySelector(".preloader");
+                preloader.classList.add("hide");
+                setTimeout(() => {
+                    preloader.style.display = "none";
+                }, 500);
+            });
+          </script>
+        </body>
+        </html>

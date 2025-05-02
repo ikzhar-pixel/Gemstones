@@ -194,5 +194,17 @@
                   Materials from <a href="https://www.flaticon.com/">this</a> and <a href="https://icons8.com/icons">this</a> site</a> were used
                 </div>
                 </footer>
+                <div class="preloader">
+                    <div class="loader-text">Loading<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></div>
+                  </div>
+                  <script>
+                    window.addEventListener("load", () => {
+                        const preloader = document.querySelector(".preloader");
+                        preloader.classList.add("hide");
+                        setTimeout(() => {
+                            preloader.style.display = "none";
+                        }, 500);
+                    });
+                  </script>                  
     </body>
 </html>
