@@ -59,7 +59,11 @@ section{
     background: rgba(29, 26, 26, 0.574);
     backdrop-filter: blur(35px);
 }
-
+.navbar .loho-menu .hr{
+    margin: 0 0 1rem;
+    width: 40px;
+    border: .2rem solid lightgray;
+}
 .navbar .logo-menu {
     display: flex;
     align-items: center;
@@ -83,21 +87,6 @@ section{
     transition-delay: .2s;
 }
 
-.navbar .logo-menu .toggle-btn {
-    position: absolute;
-    left: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    font-size: 28px;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
 .navbar .list {
     display: none;
     flex-direction: column;
@@ -111,6 +100,51 @@ section{
     display: flex;
 }
 
+.navbar .logo-menu .toggle-btn {
+    position: absolute;
+    top: 30%;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    z-index: 10;
+}
+
+.navbar.active .logo-menu .toggle-btn {
+    transform: rotate(90deg);
+}
+.navbar.active .toggle-btn span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar.active .toggle-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar.active .toggle-btn span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+.nav-divider {
+    border: none;
+    border-bottom: 2px solid #ffffff30;
+    margin: 0 20px;
+}
+.nav-subtitle {
+    color: #fff;
+    font-size: 18px;
+    margin: 20px;
+    opacity: 0;
+    transition: 0.3s;
+    margin-left: 30px;
+    pointer-events: none;
+}
+.navbar.active .nav-subtitle {
+    opacity: 1;
+    transition-delay: .4s;
+}
 .list .list-item {
     width: 100%;
     line-height: 50px;

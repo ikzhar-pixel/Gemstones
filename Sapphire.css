@@ -77,17 +77,30 @@ html{
 
 .navbar .logo-menu .toggle-btn {
     position: absolute;
-    left: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
+    top: 30%;
+    left: 15px;
+    width: 30px;
+    height: 30px;
     font-size: 28px;
     color: #fff;
     cursor: pointer;
-    transition: 0.5s;
+    transition: transform 0.4s ease;
+    z-index: 10;
+}
+
+.navbar.active .logo-menu .toggle-btn {
+    transform: rotate(90deg);
+}
+.navbar.active .toggle-btn span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar.active .toggle-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar.active .toggle-btn span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .navbar .list {
