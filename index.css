@@ -491,6 +491,22 @@ section{
     font-weight: 600;
     color: var(--main-color)
 }
+.footer .footer-button {
+    background: white;
+    color: black;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 1s, text-shadow 1s;
+  }
+
+.footer .footer-button:hover {
+    color: #00ffff;
+    text-shadow: 0 0 5px #08ecec;
+  }
 /* Media */
 @media (max-width: 1200px) {
     html{

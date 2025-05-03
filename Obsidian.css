@@ -64,6 +64,24 @@ html{
     0%, 80%, 100% { opacity: 0; }
     40% { opacity: 1; }
 }
+.nav-divider {
+    border: none;
+    border-bottom: 2px solid #ffffff30;
+    margin: 0 20px;
+}
+.nav-subtitle {
+    color: #fff;
+    font-size: 18px;
+    margin: 20px;
+    opacity: 0;
+    transition: 0.3s;
+    margin-left: 30px;
+    pointer-events: none;
+}
+.navbar.active .nav-subtitle {
+    opacity: 1;
+    transition-delay: .4s;
+}
 .navbar {
     position: fixed;
     top: 0;
